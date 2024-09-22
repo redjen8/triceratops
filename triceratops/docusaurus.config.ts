@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 const config: Config = {
   title: "My Site",
@@ -61,6 +62,26 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
+  plugins: [
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "api", // plugin id
+        docsPluginId: "classic", // configured for preset-classic
+        config: {
+          petstore: {
+            specPath: "static/openapi/example.yaml",
+            outputDir: "docs/example",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          } satisfies OpenApiPlugin.Options,
+        },
+      },
+    ],
+  ],
+  themes: ["docusaurus-theme-openapi-docs"],
 
   themeConfig: {
     // Replace with your project's social card
