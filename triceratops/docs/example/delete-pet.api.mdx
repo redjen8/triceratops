@@ -1,0 +1,182 @@
+---
+id: delete-pet
+title: "deletePet"
+description: "deletes a single pet based on the ID supplied"
+sidebar_label: "deletePet"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RWBpw3w7CwtdvBpwZpDgGIt1u4U5MDaTKzOllSJThoY/veBstMkS7FhuSSR+B4fyUd1UFIovHasrYEcSqqJKShUQZtNTcoRqycMVCprFFekFjcqtM7VmkpIwDryKNhF+Ya+J4YEHHpsiMkHyJcdGGwIctAC0pLJIVeQ/JF+caPsOuZkqwY2SMDTS6s9lZCzbymBUFTUIOQd8N5FVsO0IQ8JrK1vkIejL9fQ9yuBB2dNoCCI6eRavs7TSsIhWwm9aFpjW/NlXGvo1VHBVCry3krCwhomE2NRulLEbmTPQQDdpVT79EwFnxW1hMKWUmdDIeCGYJWA89JZ1oPoeP+vcq+mov3AcYwO7LXZQN8nwJprOZpH8b18BMGVPU4vjo4ryCFzxCHrdNlDAoH89jDL1teQQ8XsQp7FKLae0rDDzYZ8qm22nYJ0Xpu1FSWCHDr4OZ2kEzgqeRgw6n4kuXDETAVsXE1qdr9QXCGrNkR/HtIqDAqNotchLPqmsSawRya1JuTWU1B6cO+dIyNMV+lEBUeFXo8TE03km3C3fiC/1QWNFeZZdlJXDMnGsWMRxz46+1CJsD8SNpAANailU+g0EzZfj0SQnDTxLIXMsNYFmUAn5DOHRUVqGnt33v7dbpdivE6t32QjNmS3i2/z7w/zT9N0klbc1NEAzgZu0JwwD0NXw86etb47evu/n4XRekyvnLkatZGyou5udNdSli5AArkuxfCVDSynXSe0P33d93L80pLfQ75cJbBFr/FJXLPsoNRBfpeQr7EO9BfpH36Mi/ZRvf+6vKt1PESzB8lct/IPEvhF++EV61d9AhVhST4KGi5mRUGOTyAXb4KsxdvG3cxv549z6PvfXlffiA==
+sidebar_class_name: "delete api-method"
+info_path: docs/example/swagger-petstore
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"deletePet"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/pets/{id}"}
+>
+  
+</MethodEndpoint>
+
+
+
+deletes a single pet based on the ID supplied
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"id","in":"path","description":"ID of pet to delete","required":true,"schema":{"type":"integer","format":"int64"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"204"}
+        value={"204"}
+      >
+        <div>
+          
+          
+          pet deleted
+          
+          
+        </div><div>
+          
+        </div>
+      </TabItem><TabItem
+        label={"default"}
+        value={"default"}
+      >
+        <div>
+          
+          
+          unexpected error
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"code"}
+                        required={true}
+                        schemaName={"int32"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","format":"int32"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"code\": 0,\n  \"message\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
